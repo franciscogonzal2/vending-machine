@@ -1,0 +1,88 @@
+@import '../../scss/module-base.scss';
+
+.productList{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include sm{
+        flex-direction: row;   
+    }
+}
+.containerProduct{
+    border: 1px solid gainsboro;
+    width: 85%;
+    padding: 1rem;
+    margin: 0.3rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    @include sm{
+        width: 50%;   
+    }
+    @include md{
+        width: 33.33%; 
+    }
+    @include lg{
+        width: 30%;  
+    }
+
+}
+.title{
+    color: DimGray;
+    font-size: medium;
+    font-family: 'Courier New';
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.itemDescription{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin:2rem
+}
+
+.onPrepare{
+    display: flex;
+    flex-direction: column;
+}
+.onPrepareproduct{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.itemBock{
+    display: flex;
+    flex-direction: row;
+}
+
+.nameProduct{
+    padding: 1rem;
+    width: 20%;
+    border: 1px solid black;
+}
+.classOfProdcuts{
+    padding: 1rem;
+    width: 20%; 
+    border: 1px solid black;
+}
+.timeProduct{   
+    padding: 1rem;
+    width: 20%; 
+    border: 1px solid black;
+}
+.timer{
+    padding: 1rem;
+    width: 20%; 
+    border: 1px solid black;
+}

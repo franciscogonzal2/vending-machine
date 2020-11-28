@@ -1,0 +1,83 @@
+$breakpoint-sm-val: 768 !default;
+$breakpoint-md-val: 1024 !default;
+$breakpoint-lg-val: 1280 !default;
+$breakpoint-xl-val: 1400 !default;
+$breakpoint-xxl-val: 1700 !default;
+// ------------ Breakpoints
+$breakpoint-sm: $breakpoint-sm-val + 'px' !default;
+$breakpoint-md: $breakpoint-md-val + 'px' !default;
+$breakpoint-lg: $breakpoint-lg-val + 'px' !default;
+$breakpoint-xl: $breakpoint-xl-val + 'px' !default;
+$breakpoint-xxl: $breakpoint-xxl-val + 'px' !default;
+
+@mixin xs-only() {
+  @media (max-width: $breakpoint-sm-val - 1 + 'px') {
+    @content;
+  }
+}
+
+@mixin sm() {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin sm-only() {
+  @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md-val - 1 + 'px') {
+    @content;
+  }
+}
+
+@mixin sm-and-lower() {
+  @media (max-width: $breakpoint-md-val - 1 + 'px') {
+    @content;
+  }
+}
+
+@mixin sm-and-lower-and-landscape() {
+  @media (max-width: $breakpoint-md-val - 1 + 'px') and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin md-only() {
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg-val - 1 + 'px') {
+    @content;
+  }
+}
+
+@mixin md-and-lower-and-landscape() {
+  @media (max-width: $breakpoint-lg-val - 1 + 'px') and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin md-and-lower() {
+  @media (max-width: $breakpoint-lg-val - 1 + 'px') {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xxl() {
+  @media (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
